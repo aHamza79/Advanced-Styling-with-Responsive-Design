@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Responsive Photo Gallery </title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <link href="jquery.bsPhotoGallery.css" rel="stylesheet">
+    <script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="jquery.bsPhotoGallery.js"></script>
+  </head>
+  <style>
+      ul {
+          padding:0 0 0 0;
+          margin:0 0 0 0;
+      }
+      ul li {
+          list-style:none;
+          margin-bottom:25px;
+      }
+      ul li img {
+          cursor: pointer;
+      }
+      .modal-body {
+          padding:5px !important;
+      }
+      .modal-content {
+          border-radius:0;
+      }
+      .modal-dialog img {
+          text-align:center;
+          margin:0 auto;
+      }
+    .controls{
+        width:50px;
+        display:block;
+        font-size:11px;
+        padding-top:8px;
+        font-weight:bold;
+    }
+    .next {
+        float:right;
+        text-align:right;
+    }
+      /*override modal for demo only*/
+      .modal-dialog {
+          max-width:500px;
+          padding-top: 90px;
+      }
+      @media screen and (min-width: 768px){
+          .modal-dialog {
+              width:500px;
+              padding-top: 90px;
+          }
+      }
+      @media screen and (max-width:1500px){
+          #ads {
+              display:none;
+          }
+      }
+  </style>
+  <body>
+    <div class="container">
+        <div class="row" style="text-align:center; border-bottom:1px dashed #ccc;  padding:0 0 20px 0; margin-bottom:40px;">
+            <h3 style="font-family:arial; font-weight:bold; font-size:30px;">
+                Responsive Photo Gallery
+        </h3>
+        </div>
+
+        <ul class="row">
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2015/12/01/20/28/road-1072823_960_720.jpg" data-content="data 1">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://image.shutterstock.com/image-photo/country-road-260nw-628141070.jpg" data-content="data 2">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2015/06/19/21/24/the-road-815297__340.jpg" data-content='data 3'>
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2015/09/09/16/05/forest-931706__340.jpg" data-content="data 4">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2015/01/28/23/35/landscape-615429__340.jpg" data-content="data 5">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2018/01/14/23/12/nature-3082832__340.jpg" data-content="data 6">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2016/11/14/04/45/elephant-1822636__340.jpg" data-content="data 7">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2016/10/22/17/46/scotland-1761292__340.jpg" data-content="data 8">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2018/09/23/18/30/drop-3698073__340.jpg" data-content="data 9">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2014/08/01/00/08/pier-407252__340.jpg" data-content="data 10">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2017/04/09/09/56/avenue-2215317__340.jpg" data-content="data 11">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2016/03/27/22/22/fox-1284512__340.jpg" data-content="data 12">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2018/05/30/00/24/thunderstorm-3440450__340.jpg" data-content="data 13">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2016/12/27/21/03/lone-tree-1934897__340.jpg" data-content="data 14">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2016/10/14/19/21/canyon-1740973__340.jpg" data-content="data 15">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2017/01/14/12/59/iceland-1979445__340.jpg" data-content="data 16">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2016/12/11/12/02/bled-1899264__340.jpg" data-content="data 17">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2017/12/17/19/08/away-3024773__340.jpg" data-content="data 18">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2018/01/22/14/13/animal-3099035__340.jpg" data-content="data 19">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2016/11/12/11/51/forest-1818690__340.jpg" data-content="data 20">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2013/07/25/01/31/sunlight-166733__340.jpg" data-content="data 21">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2018/08/21/23/29/fog-3622519__340.jpg" data-content="data 22">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2018/01/30/22/50/forest-3119826__340.jpg" data-content="data 23">
+            </li>
+            <li class="col-lg-2 col-md-2 col-sm-3 col-xs-4">
+                <img class="img-responsive" src="https://cdn.pixabay.com/photo/2016/12/05/11/39/fox-1883658__340.jpg" data-content="data 24">
+            </li>
+          </ul>
+    </div> <!-- /container -->
+
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-body">
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+  </body>
+
+</html>
